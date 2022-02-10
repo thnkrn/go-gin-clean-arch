@@ -9,13 +9,13 @@
 - [Viper](https://github.com/spf13/viper) is a complete configuration solution for Go applications including 12-Factor apps. It is designed to work within an application, and can handle all types of configuration needs and formats.
 - [swag](https://github.com/swaggo/swag) converts Go annotations to Swagger Documentation 2.0 with [gin-swagger](https://github.com/swaggo/gin-swagger) and [swaggo files](github.com/swaggo/files)
 
-## Using `bulletin-resource-center` project
+## Using `go-gin-clean-arch` project
 
-To use `bulletin-resource-center` project, follow these steps:
+To use `go-gin-clean-arch` project, follow these steps:
 
 ```bash
 # Navigate into the project
-cd ./bulletin-resource-center
+cd ./go-gin-clean-arch
 
 # Install dependencies
 make deps
@@ -75,40 +75,3 @@ For removing existing user
 
 For updating existing user
 
-## Commit rules
-
-### Conventional Commits
-
-- We are using Conventional Commits rule to add readable meaning to commit messages
-- We are following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) rule
-
-#### Format for commit
-
-[type][optional scope]: [optional REFERENCE-1234] [description]
-
-- ex. build(husky): [BO-000] add husky and commitlint
-
-- List of commit type
-  [
-  'build',
-  'ci',
-  'chore',
-  'docs',
-  'feat',
-  'fix',
-  'perf',
-  'refactor',
-  'revert',
-  'style',
-  'test'
-  ]
-
-## Contributing to `bulletin-resource-center`
-
-To contribute to `bulletin-resource-center`, follow these steps:'
-
-1. Clone this repository.
-2. Create a feature branch: `git checkout -b <branch_name>`.
-3. Make your changes and commit them: `git commit -m '<commit_message>'`
-4. Push to the original branch: `git push origin <branch_name>`
-5. Create the pull request against `master`.
