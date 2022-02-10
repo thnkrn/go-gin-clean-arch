@@ -7,7 +7,7 @@ import (
 
 	_ "github.com/thnkrn/go-gin-clean-arch/cmd/api/docs"
 	handler "github.com/thnkrn/go-gin-clean-arch/pkg/http/handler"
-	// middleware "github.com/thnkrn/go-gin-clean-arch/pkg/http/middleware"
+	middleware "github.com/thnkrn/go-gin-clean-arch/pkg/http/middleware"
 )
 
 type ServerHTTP struct {
@@ -24,7 +24,7 @@ func NewServerHTTP(userHandler *handler.UserHandler) *ServerHTTP {
 	engine.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	// Request JWT
-	// engine.POST("/login", middleware.LoginHandler)
+	engine.POST("/login", middleware.LoginHandler)
 
 	// Auth middleware
 	// api := engine.Group("/api", middleware.AuthorizationMiddleware)
