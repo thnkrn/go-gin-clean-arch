@@ -4,6 +4,7 @@ import (
 	"context"
 
 	domain "github.com/thnkrn/go-gin-clean-arch/pkg/domain"
+	interfaces "github.com/thnkrn/go-gin-clean-arch/pkg/repository/interface"
 	"gorm.io/gorm"
 )
 
@@ -11,7 +12,7 @@ type userDatabase struct {
 	DB *gorm.DB
 }
 
-func NewUserRepository(DB *gorm.DB) domain.UserRepository {
+func NewUserRepository(DB *gorm.DB) interfaces.UserRepository {
 	return &userDatabase{DB}
 }
 

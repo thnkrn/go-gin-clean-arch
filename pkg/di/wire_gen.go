@@ -7,12 +7,12 @@
 package di
 
 import (
+	"github.com/thnkrn/go-gin-clean-arch/pkg/api"
+	"github.com/thnkrn/go-gin-clean-arch/pkg/api/handler"
 	"github.com/thnkrn/go-gin-clean-arch/pkg/config"
 	"github.com/thnkrn/go-gin-clean-arch/pkg/db"
-	"github.com/thnkrn/go-gin-clean-arch/pkg/http"
-	"github.com/thnkrn/go-gin-clean-arch/pkg/http/handler"
+	"github.com/thnkrn/go-gin-clean-arch/pkg/repository"
 	"github.com/thnkrn/go-gin-clean-arch/pkg/usecase"
-	"github.com/thnkrn/go-gin-clean-arch/pkg/usecase/repository"
 )
 
 // Injectors from wire.go:

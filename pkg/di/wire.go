@@ -5,12 +5,12 @@ package di
 
 import (
 	"github.com/google/wire"
+	http "github.com/thnkrn/go-gin-clean-arch/pkg/api"
+	handler "github.com/thnkrn/go-gin-clean-arch/pkg/api/handler"
 	config "github.com/thnkrn/go-gin-clean-arch/pkg/config"
 	db "github.com/thnkrn/go-gin-clean-arch/pkg/db"
-	http "github.com/thnkrn/go-gin-clean-arch/pkg/http"
-	handler "github.com/thnkrn/go-gin-clean-arch/pkg/http/handler"
+	repository "github.com/thnkrn/go-gin-clean-arch/pkg/repository"
 	usecase "github.com/thnkrn/go-gin-clean-arch/pkg/usecase"
-	repository "github.com/thnkrn/go-gin-clean-arch/pkg/usecase/repository"
 )
 
 func InitializeAPI(cfg config.Config) (*http.ServerHTTP, error) {

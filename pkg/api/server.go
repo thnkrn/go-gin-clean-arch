@@ -6,8 +6,8 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	_ "github.com/thnkrn/go-gin-clean-arch/cmd/api/docs"
-	handler "github.com/thnkrn/go-gin-clean-arch/pkg/http/handler"
-	middleware "github.com/thnkrn/go-gin-clean-arch/pkg/http/middleware"
+	handler "github.com/thnkrn/go-gin-clean-arch/pkg/api/handler"
+	middleware "github.com/thnkrn/go-gin-clean-arch/pkg/api/middleware"
 )
 
 type ServerHTTP struct {
@@ -27,9 +27,8 @@ func NewServerHTTP(userHandler *handler.UserHandler) *ServerHTTP {
 	engine.POST("/login", middleware.LoginHandler)
 
 	// Auth middleware
-	// api := engine.Group("/api", middleware.AuthorizationMiddleware)
+	api := engine.Group("/api", middleware.AuthorizationMiddleware)
 
-	api := engine.Group("/api")
 	api.GET("users", userHandler.FindAll)
 	api.GET("users/:id", userHandler.FindByID)
 	api.POST("users", userHandler.Save)

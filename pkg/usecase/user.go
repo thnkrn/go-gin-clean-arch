@@ -4,14 +4,15 @@ import (
 	"context"
 
 	domain "github.com/thnkrn/go-gin-clean-arch/pkg/domain"
+	interfaces "github.com/thnkrn/go-gin-clean-arch/pkg/repository/interface"
 	services "github.com/thnkrn/go-gin-clean-arch/pkg/usecase/interface"
 )
 
 type userUseCase struct {
-	userRepo domain.UserRepository
+	userRepo interfaces.UserRepository
 }
 
-func NewUserUseCase(repo domain.UserRepository) services.UserUseCase {
+func NewUserUseCase(repo interfaces.UserRepository) services.UserUseCase {
 	return &userUseCase{
 		userRepo: repo,
 	}
